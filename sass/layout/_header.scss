@@ -3,13 +3,11 @@ padding:20px;
 background-color: #fff;
 }
 
-
 .header-nav__list {
 display: flex;
 justify-content: flex-end;
 align-items: center;
 gap: 25px;
-
 }
 
 .header-nav__item  {
@@ -17,43 +15,31 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-basis: 30px;
-
 }
-
-
 
 .header-nav__link {
 display: flex;
 justify-content: center;
-    align-items: center;
+align-items: center;
 text-decoration: none;
 color: rgb(17, 15, 15);
 transition: 250ms color cubic-bezier(0.075, 0.82, 0.165, 1);
 
+    &:hover,
+    &:focus { 
+    color: rgb(170, 63, 63);
+    }
 
-
-&:hover,
-&:focus { 
-color: rgb(170, 63, 63);
-
+        &.link-img:hover {
+        box-shadow: 2px 2px 8px 2px rgba(18, 20, 22, 0.14);
+        }
 }
 
-&.link-img:hover {
-box-shadow: 2px 2px 8px 2px rgba(18, 20, 22, 0.14);
-}
-}
-
-
-// checkbox >>>>>>>>>>>>>>>>>>>>>>>>>
-
-// скрывае чекбокс
 .visually-hidden {
-    position: absolute;
-    appearance: none;
-    
+position: absolute;
+appearance: none;
 }
 
-// делаем кастомный чекбокс
 .custom-checkbox {
 position: relative;
 
@@ -68,11 +54,9 @@ position: relative;
     background-repeat: no-repeat;
     background-size: 30px 30px;
     cursor: pointer;
+    }
 
 }
-
-}
-
 
 .popup-wrapper {
 display: none;
@@ -87,16 +71,23 @@ box-shadow: 1px 1px 2px rgba(128, 128, 128, 0.4);
 background-color: #fff;
 overflow:auto;
 
-.checkbox:checked ~ & {
-        display: block;
+    .checkbox:checked ~ & {
+    display: block;
     } 
+}
 
+.popup-flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 40px;
 }
 
 .popup-wrapper img {
 margin-bottom: 10px;
 }
-
 
 .span {
 content:" ";
@@ -112,49 +103,28 @@ border-left: 1px solid rgba(128, 128, 128, 0.4);
 transform: rotate(45deg);
 background-color: #fff;
 
-.checkbox:checked + & {
-display: block;
-
-}
-}
-
-
-.popup-list {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-margin-bottom: 10px;
-gap: 40px;
-
+    .checkbox:checked + & {
+    display: block;
+    }
 }
 
-.popup-list a {
+.popup-list__link {
+width: calc((100% - 120px) / 3);
 text-decoration: none;
 color: #000;
-text-align:center;
+text-align: center;
 
+    &:hover,
+    &:focus {
+     border: 1px solid grey;
+    }
 }
-
-
-.popup-list__item {
-
-width: calc((100% - 120px) / 3);
-
-&:hover,
-&:focus {
-border: 1px solid grey;    
-}
-}
-
 
 img {
 display: block;
 max-width: 100%;
 object-fit: contain;
 }
-
-
 
 .label-more {
 position: absolute;
@@ -168,22 +138,19 @@ z-index: 1;
 
 background-color: bisque;
 cursor: pointer;
-
 }
 
 .next-popup-wrapper{
-    display: none;
-    position: absolute;
-    top: 500px;
-    right: 0px;
-    padding: 30px 15px 50px;
-    background-color: #fff;
-    z-index: 10;
-
-
+display: none;
+position: absolute;
+top: 500px;
+right: 0px;
+padding: 30px 15px 50px;
+background-color: #fff;
+z-index: 10;
 
     .checkbox-more:checked ~ & {
-        display: block;
+    display: block;
     }
 
 }
@@ -192,4 +159,3 @@ cursor: pointer;
 visibility: hidden;
 pointer-events: none;
 }
-
