@@ -1,6 +1,9 @@
 :root {
   --popupwrapper-color: rgba(128, 128, 128, 0.4);
   --text-color: #000;
+  --main-bg-color: #fff;
+  --size-30: 30px;
+  --size-20: 20px;
 }
 
 *,
@@ -45,8 +48,8 @@ li {
 }
 
 .header {
-  padding: 20px;
-  background-color: #fff;
+  padding: var(--size-20);
+  background-color: var(--main-bg-color);
 }
 
 .header-nav__list {
@@ -120,11 +123,11 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30px;
-  height: 30px;
+  width: var(--size-30);
+  height: var(--size-30);
   background-image: url(../img/popup-button.png);
   background-repeat: no-repeat;
-  background-size: 30px 30px;
+  background-size: var(--size-30);
   cursor: pointer;
 }
 
@@ -139,7 +142,7 @@ li {
   right: 50px;
   width: 350px;
   height: 400px;
-  padding: 30px 15px 30px;
+  padding: var(--size-30) 15px var(--size-30);
   border: 1px solid var(--popupwrapper-color);
   -webkit-box-shadow: 1px 1px 2px var(--popupwrapper-color);
           box-shadow: 1px 1px 2px var(--popupwrapper-color);
@@ -175,13 +178,13 @@ li {
   top: 55px;
   z-index: 10;
   display: none;
-  width: 20px;
-  height: 20px;
-  border-top: 1px solid rgba(128, 128, 128, 0.4);
-  border-left: 1px solid rgba(128, 128, 128, 0.4);
+  width: var(--size-20);
+  height: var(--size-20);
+  border-top: 1px solid var(--popupwrapper-color);
+  border-left: 1px solid var(--popupwrapper-color);
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  background-color: #fff;
+  background-color: var(--main-bg-color);
 }
 .checkbox:checked + .span {
   display: block;
@@ -254,8 +257,8 @@ img {
   position: absolute;
   top: 500px;
   right: 0px;
-  padding: 30px 15px 50px;
-  background-color: #fff;
+  padding: var(--size-30) 15px 50px;
+  background-color: var(--main-bg-color);
   z-index: 10;
 }
 .checkbox-more:checked ~ .next-popup-wrapper {
@@ -269,11 +272,11 @@ img {
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
   .header-nav__list {
-    gap: 20px;
+    gap: var(--size-20);
   }
   .header-nav__item {
-    -ms-flex-preferred-size: 20px;
-        flex-basis: 20px;
+    -ms-flex-preferred-size: var(--size-20);
+        flex-basis: var(--size-20);
   }
   .visually-hidden {
     position: absolute;
@@ -288,7 +291,7 @@ img {
     right: 50px;
     width: 250px;
     height: 400px;
-    padding: 20px 5px 30px;
+    padding: var(--size-20) 5px var(--size-30);
     border: 1px solid var(--popupwrapper-color);
     -webkit-box-shadow: 1px 1px 2px var(--popupwrapper-color);
             box-shadow: 1px 1px 2px var(--popupwrapper-color);
@@ -302,7 +305,7 @@ img {
     position: absolute;
     top: 600px;
     right: 0px;
-    padding: 30px 15px 50px;
+    padding: var(--size-30) 15px 50px;
     background-color: #fff;
     z-index: 10;
   }
